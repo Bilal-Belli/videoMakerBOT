@@ -1,12 +1,11 @@
 import tkinter as tk
+from tkinter import *
 from gtts import gTTS
 from moviepy.editor import *
-
 # Create a Tkinter window
 root = tk.Tk()
 
-# Create an entry widget
-entry = tk.Entry(root)
+
 
 root.title('Speaker BOT')
 # Designate Height and Width of our app
@@ -18,6 +17,25 @@ screen_height = root.winfo_screenheight()
 x = (screen_width / 2) - (app_width / 2)
 y = (screen_height / 2 ) - (app_height / 2)
 root.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
+root.resizable(False,False)
+
+FirstBackGroung = Label(root,width="550",height="285",bg="#183444")
+FirstBackGroung.place(x=0,y=0)
+
+# Create an entry widget
+frame = Frame(root, bd=5, bg="#EEECCC")#for text output
+frame.pack(ipadx=5, ipady=5, padx=5, pady=5)
+# entry = tk.Entry(frame,width=82,font=("Arial", 13))
+
+entry = tk.Text(frame, height=5, width=82, font=("Arial", 13))
+
+# Create a scrollbar and attach it to the Text widget
+scrollbar = tk.Scrollbar(frame)
+scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+entry.config(yscrollcommand=scrollbar.set)
+scrollbar.config(command=entry.yview)
+
+entry.pack(side=TOP)
 
 # Define a function to read the text aloud and create an MP4 file
 def create_video2():
