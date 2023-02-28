@@ -7,6 +7,7 @@ import numpy as np
 from gtts import gTTS
 from moviepy.editor import *
 import os
+import time
 
 # global variables
 cmpt = 1
@@ -56,17 +57,19 @@ def create_video2():
     final_clip.write_videofile("video.mp4")
     # a loop to delete cache audios
     for j in range(1,cmpt):
+        time.sleep(2)
         filename = 'audio'+str(j)+'.mp3'
         os.remove(filename)
     # a loop to delete cache videos
     for j in range(1,cmpt):
+        time.sleep(2)
         video_path = 'video'+str(j)+'.mp4'
         os.remove(video_path)
 
 # Create a Tkinter window
 root = tk.Tk()
 root.title('Speaker BOT')
-
+root.iconbitmap('icon.ico')
 # Designate Height and Width of our app
 app_width = 550
 app_height = 520
