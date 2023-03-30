@@ -66,6 +66,12 @@ def create_video2():
         video_path = 'video'+str(j)+'.mp4'
         os.remove(video_path)
 
+def copy(event):
+    event.widget.event_generate("<<Copy>>")
+
+def paste(event):
+    event.widget.event_generate("<<Paste>>")
+
 # Create a Tkinter window
 root = tk.Tk()
 root.title('Speaker BOT')
@@ -102,6 +108,7 @@ frame = Frame(root, bd=5, bg="#EEECCC")#for text output
 frame.pack(ipadx=5, ipady=5, padx=5, pady=5)
 entry = tk.Text(frame, height=2, width=50, font=("Arial", 13),name=str(cmpt))
 entries.append(entry)
+
 cmpt = cmpt + 1
 # Create a scrollbar and attach it to the Text widget
 scrollbar = tk.Scrollbar(frame)
@@ -109,4 +116,6 @@ scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
 scrollbar.config(command=entry.yview)
 entry.pack(ipadx=5, ipady=5, padx=5, pady=5)
 
+entry.bind("<Control-c>", copy)
+entry.bind("<Control-v>", paste)
 root.mainloop()
