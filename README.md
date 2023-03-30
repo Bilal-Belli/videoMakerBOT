@@ -1,9 +1,9 @@
-<h3 align="left">Language And Frameworks</h3>
+<h3 align="left">Language And Libraries</h3>
 <div align="center">
-   <p align="center">Python - moviepy</p>
+   <p align="center">Python - Moviepy</p>
 </div>
-<h3 align="left">Views</h3>
+<h3 align="left">Demo</h3>
 <div align="center">
-  <p align="center"><img width="500" alt="ss" src="https://user-images.githubusercontent.com/74218805/221885560-87e683f6-76d7-4318-a0b5-49706e343475.PNG"></p>
-  <p align="center"><img width="300" alt="qq" src="https://user-images.githubusercontent.com/74218805/221885583-b2dff62f-3a18-4779-86dd-4a2c3fe35725.PNG"></p>
+   <img width="414" alt="4" src="https://user-images.githubusercontent.com/74218805/228941856-35b7716a-5f18-4d53-862b-3ad61fc86811.gif">
+   <img width="414" alt="4" src="https://user-images.githubusercontent.com/74218805/228941753-6637e2d5-8e21-40b0-ad19-63f3a6d7c6c2.PNG">
 </div>
