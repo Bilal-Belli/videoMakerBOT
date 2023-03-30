@@ -4,8 +4,6 @@ def copy(event):
 def paste(event):
     event.widget.event_generate("<<Paste>>")
 
-
-
 # Designate Height and Width of our app
 app_width = 550
 app_height = 520

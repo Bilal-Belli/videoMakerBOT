@@ -9,7 +9,6 @@ from moviepy.editor import *
 from tkinter import filedialog
 from moviepy.video.io.VideoFileClip import VideoFileClip
 from functionnalities import copy,paste,app_width,app_height,cmpt,entries
-from functionnalities import on_enter,on_leave,on_enter2,on_leave2,cmpt,entries
 
 def on_enter(e):
     video_button.config(cursor="hand2")
