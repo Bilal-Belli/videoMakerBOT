@@ -54,7 +54,7 @@ def create_video2():
         clip = VideoFileClip(video_path)
         clips.append(clip)
     final_clip = concatenate_videoclips(clips)
-    final_clip.write_videofile("video.mp4")
+    final_clip.write_videofile("./outputVideos/video.mp4")
     # a loop to delete cache audios
     for j in range(1,cmpt):
         time.sleep(2)
