@@ -16,7 +16,7 @@ entries = []
 def add__widget():
     global cmpt
     global entries
-    entry = tk.Text(frame, height=2, width=50, font=("Arial", 13),name=str(cmpt))
+    entry = tk.Text(frame, height=2, width=50, font=("Arial", 13),name=str(cmpt), bg="#FFC300")
     entries.append(entry)
     cmpt = cmpt + 1
     entry.pack(ipadx=5, ipady=5, padx=5, pady=5)
@@ -74,8 +74,8 @@ def paste(event):
 
 # Create a Tkinter window
 root = tk.Tk()
-root.title('Speaker BOT')
-root.iconbitmap('icon.ico')
+root.title('Video Maker BOT')
+root.iconbitmap('./logo/icon.ico')
 # Designate Height and Width of our app
 app_width = 550
 app_height = 520
@@ -87,26 +87,20 @@ x = (screen_width / 2) - (app_width / 2)
 y = (screen_height / 2 ) - (app_height / 2)
 root.geometry(f'{app_width}x{app_height}+{int(x)}+{int(y)}')
 root.resizable(False,False)
-FirstBackGroung = Label(root,width="550",height="285",bg="#183444")
+FirstBackGroung = Label(root,width="550",height="285",bg="#003DA5")
 FirstBackGroung.place(x=0,y=0)
 
-# Create a menubar
-menubar = Menu(root)
-# Create a "Créer la vidéo" menu
-file_menu = Menu(menubar, tearoff=0)
-file_menu.add_command(label="Créer la vidéo", command=create_video2)
-menubar.add_cascade(label="Créer la vidéo", menu=file_menu)
-# Create a "Ajouter Script" menu
-edit_menu = Menu(menubar, tearoff=0)
-edit_menu.add_command(label="Ajouter Script", command=add__widget)
-menubar.add_cascade(label="Ajouter Script", menu=edit_menu)
-# Display the menubar
-root.config(menu=menubar)
+button_frame = Frame(root,bg="#003DA5")
+video_button = Button(button_frame, text="Créer la vidéo", command=create_video2 , bg="#FF5733", fg="#F2F2F2")
+video_button.pack(side=LEFT, padx=5)
+script_button = Button(button_frame, text="Ajouter Script", command=add__widget , bg="#FF5733", fg="#F2F2F2")
+script_button.pack(side=LEFT, padx=5)
+button_frame.pack(pady=10)
 
 # Create an entry widget
-frame = Frame(root, bd=5, bg="#EEECCC")#for text output
+frame = Frame(root, bd=5, bg="#FFC300")#for text output
 frame.pack(ipadx=5, ipady=5, padx=5, pady=5)
-entry = tk.Text(frame, height=2, width=50, font=("Arial", 13),name=str(cmpt))
+entry = tk.Text(frame, height=2, width=50, font=("Arial", 13),name=str(cmpt), bg="#FFC300")
 entries.append(entry)
 
 cmpt = cmpt + 1
